@@ -1,8 +1,15 @@
 import React from 'react';
 import "./candies.css";
+import MugCard from "./MugCard";
 
-export default function Candies() {
+function MugsList({ mugs }) {
   return (
-    <div className='candies'>Candies</div>
-  )
+    <div className="mugs-list">
+      {mugs.map(mug => (
+        <MugCard key={mug.id} mug={mug} />
+      ))}
+    </div>
+  );
 }
+
+export default MugsList;

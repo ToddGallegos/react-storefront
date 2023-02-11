@@ -7,12 +7,12 @@ export default function Navbar() {
   return (
     <div className="navbarContainer">
       <div className="navbarLeft">
-        <span className="logo">Candy Store</span>
+        <span className="logo">Mug Store</span>
       </div>
       <div className="navbarCenter">
         <div className="searchBar">
           <SearchIcon className="searchIcon"/>
-          <input placeholder="Search for candies" className="searchInput" />
+          <input placeholder="Search for mugs" className="searchInput" />
         </div>
       </div>
       <div className="navbarRight">

@@ -1,4 +1,15 @@
 .candies {
-    flex: 7;
     height: calc(100vh - 50px);
+}
+
+.mugs-list {
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:center;
+}
+
+.card {
+    margin:1rem;
+    width: 18rem;
 }

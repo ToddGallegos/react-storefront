@@ -1,16 +1,14 @@
 import React from 'react'
 import "./home.css"
 import Candies from '../../components/candies/Candies'
-import Navbar from '../../components/navbar/Navbar'
-import Sidebar from '../../components/sidebar/Sidebar'
 
-export default function Home() {
+export default function Home(props) {
+  const {mugs} = props
+
   return (
     <>
-      <Navbar />
       <div className="homeContainer">
-        <Sidebar />
-        <Candies />
+        <Candies mugs={mugs}/>
       </div>
     </>
   )
