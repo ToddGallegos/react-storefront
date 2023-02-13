@@ -2,12 +2,13 @@ import React from 'react';
 import "./navbar.css";
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link } from 'react-router-dom';
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <div className="navbarContainer">
       <div className="navbarLeft">
-        <span className="logo">Mug Store</span>
+        <Link className="logo navbarLink" to="/">Mug Store</Link>
       </div>
       <div className="navbarCenter">
         <div className="searchBar">
@@ -17,12 +18,13 @@ export default function Navbar() {
       </div>
       <div className="navbarRight">
         <div className="navbarLinks">
-          <span className="navbarLink">Sign-In</span>
-          <span className="navbarLink">Register</span>
+          <Link className="navbarLink" to="/">Sign-In</Link>
+          <Link className="navbarLink" to="/">Register</Link>
         </div>
         <div className="navbarIcons">
           <div className="navbarIconItem">
-            <ShoppingCartIcon />
+            <Link className="navbarLink" to="/cart"><ShoppingCartIcon /></Link>
+            <span className="navbarIconBadge">{props.cart.length}</span>
           </div>
         </div>
       </div>

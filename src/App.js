@@ -1,5 +1,6 @@
 import Home from "./pages/home/Home";
-import Navbar from "./components/navbar/Navbar"
+import Navbar from "./components/navbar/Navbar";
+import Cart from "./components/cart/Cart"
 import { Routes, Route, BrowserRouter } from 'react-router-dom';
 import React, {useState, useEffect} from 'react';
 
@@ -21,14 +22,17 @@ function App() {
     fetchData();
   }, []);
 
+
+
   return (
       <BrowserRouter>
 
         <div>
-          <Navbar />
+          <Navbar cart={cart}/>
           <Routes>
 
-            <Route path='/' element={<Home mugs={candies} cart={cart}/>}/>
+            <Route path='/' element={<Home mugs={candies} cart={cart} setCart={setCart}/>}/>
+            <Route path='/cart' element={<Cart cart={cart} setCart={setCart}/>}/>
             
           </Routes>
 
