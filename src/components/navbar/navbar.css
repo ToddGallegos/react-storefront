@@ -6,6 +6,7 @@
     align-items: center;
     position:sticky;
     top: 0;
+    box-shadow: 0px 0px 5px 0px #272528;
 }
 
 .navbarLeft {
@@ -54,6 +55,8 @@
 .navbarLink {
     margin-right: 10px;
     cursor:pointer;
+    margin-left: 1rem;
+    margin-right:1rem;
 }
 
 .navbarIcons {

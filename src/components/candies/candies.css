@@ -18,11 +18,12 @@
     background-color:white;
     height:350px;
     box-shadow: 0px 0px 5px 0px #272528;
+    cursor:pointer;
 }
 
 img {
     margin-top:.5rem;
-    padding-left:3rem;
+    padding-left:2.5rem;
 }
 
 h3 {
