@@ -5,7 +5,8 @@ function MugCard({ mug }) {
   return (
     <div className="card">
       <img src={mug.img_url} alt={mug.title} />
-      <h2>{mug.title}</h2>
+      <h3>{mug.title}</h3>
+      <hr />
       <p>Price: ${mug.price}</p>
     </div>
   );
