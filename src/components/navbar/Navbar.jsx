@@ -23,7 +23,7 @@ export default function Navbar(props) {
         </div>
         <div className="navbarIcons">
           <div className="navbarIconItem">
-            <Link className="navbarLink" to="/cart"><ShoppingCartIcon /></Link>
+            <Link className="navbarLink" to="/cart"><ShoppingCartIcon className="shoppingCartIcon"/></Link>
             <span className="navbarIconBadge">{props.cart.length}</span>
           </div>
         </div>
