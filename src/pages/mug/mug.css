@@ -32,6 +32,7 @@
 .productPrice {
     font-size: 1.2rem;
     padding-bottom: 1rem;
+    margin-top:.5rem;
 }
 
 .addToCart {
