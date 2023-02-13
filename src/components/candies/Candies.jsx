@@ -2,10 +2,10 @@ import React from 'react';
 import "./candies.css";
 import MugCard from "./MugCard";
 
-function MugsList({ mugs }) {
+function MugsList(props) {
   return (
     <div className="mugs-list">
-      {mugs.map(mug => (
+      {props.mugs.map(mug => (
         <MugCard key={mug.id} mug={mug} />
       ))}
     </div>
