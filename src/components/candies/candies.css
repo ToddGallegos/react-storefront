@@ -17,7 +17,6 @@
     background-color:white;
     height:395px;
     box-shadow: 0px 0px 5px 0px #272528;
-    cursor:pointer;
 }
 
 img.main {
@@ -64,4 +63,9 @@ button.main:active {
     box-shadow: 0px 0px 4px -1px #272528;
     background-color:#e7bfbd;
     transform: translateY(2px);
+}
+
+.mugCardLink {
+    color:black;
+    text-decoration:none;
 }

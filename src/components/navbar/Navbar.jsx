@@ -18,8 +18,8 @@ export default function Navbar(props) {
       </div>
       <div className="navbarRight">
         <div className="navbarLinks">
-          <Link className="navbarLink" to="/">Sign-In</Link>
-          <Link className="navbarLink" to="/">Register</Link>
+          <Link className="navbarLink" to="/signin">Sign-In</Link>
+          <Link className="navbarLink" to="/signup">Register</Link>
         </div>
         <div className="navbarIcons">
           <div className="navbarIconItem">
