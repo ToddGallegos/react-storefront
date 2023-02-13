@@ -8,6 +8,9 @@ function MugCard({ mug }) {
       <h3>{mug.title}</h3>
       <hr />
       <p>Price: ${mug.price}</p>
+      <div className="cardButtonDiv">
+        <button>Add to Cart</button>
+      </div>
     </div>
   );
 }

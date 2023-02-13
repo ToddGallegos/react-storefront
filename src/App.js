@@ -11,6 +11,7 @@ function App() {
   }
 
   const [candies, setCandies] = useState([])
+  const [cart, setCart] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,7 +28,7 @@ function App() {
           <Navbar />
           <Routes>
 
-            <Route path='/' element={<Home mugs={candies}/>}/>
+            <Route path='/' element={<Home mugs={candies} cart={cart}/>}/>
             
           </Routes>
 

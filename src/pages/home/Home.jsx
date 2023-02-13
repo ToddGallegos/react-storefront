@@ -7,7 +7,7 @@ export default function Home(props) {
   return (
     <>
       <div className="homeContainer">
-        <Candies mugs={props.mugs}/>
+        <Candies mugs={props.mugs} cart={props.cart}/>
       </div>
     </>
   )
