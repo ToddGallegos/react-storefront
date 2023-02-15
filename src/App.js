@@ -18,6 +18,7 @@ function App() {
   const [candies, setCandies] = useState([])
   const [cart, setCart] = useState([])
   const [singleMug, setMug] = useState([])
+  const [user, setUser] = useState([])
 
   useEffect(() => {
     const fetchData = async () => {
@@ -36,7 +37,7 @@ function App() {
 
             <Route path='/' element={<Home mugs={candies} cart={cart} setCart={setCart} singleMug={singleMug} setMug={setMug}/>}/>
             <Route path='/cart' element={<Cart cart={cart} setCart={setCart}/>}/>
-            <Route path='/signin' element={<SignIn />}/>
+            <Route path='/signin' element={<SignIn setUser={setUser} user={user}/>}/>
             <Route path='/signup' element={<SignUp />}/>
             <Route path='/mug' element={<Mug singleMug={singleMug} setMug={setMug} cart={cart} setCart={setCart}/>}/>
             

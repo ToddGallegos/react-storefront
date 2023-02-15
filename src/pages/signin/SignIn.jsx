@@ -1,41 +1,41 @@
 import React from 'react';
 import "./signin.css"
 
-export default function SignIn() {
+export default function SignIn(props) {
+
   const signIn = async (event) => {
-    const username = event.target.username.value;
-    const password = event.target.password.value;
+    event.preventDefault();
+    const username = event.target.elements["username"].value;
+    const password = event.target.elements["password"].value;
 
     const reqBody = {
       username: username,
       password: password
     }
 
-    const url = 'http://localhost:5000/meanmugsapi/signin'
-    const options = {
+    const response = await fetch('http://localhost:5000/meanmugsapi/signin', {
       method: "POST",
-      body: JSON.stringify(reqBody),
       headers: {
-        "Content-Type": 'application/json'
-      }
-    }
-
-    const response = await fetch(url, options);
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(reqBody)
+    });
     const data = await response.json();
     console.log(data)
+    props.setUser(data.user)
+    alert(data.message)
   }
-
-
 
   return (
     <div className="signInContainer">
       <h1>Sign In</h1>
-      <form method="post">
+      <h3>{(props.user === []) ? props.user.username +" logged in": "test"}</h3>
+      <form onSubmit={signIn}>
         <label htmlFor="username">Username: </label>
         <input autoFocus="True" type="text" name="username" id="username" />
         <label htmlFor="password">Password: </label>
         <input type="password" name="password" id="password" />
-        <button onClick={signIn} id="signupSubmit" type="submit">Submit</button>
+        <button id="signupSubmit" type="submit">Sign In</button>
       </form>
     </div>
   )
