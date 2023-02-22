@@ -18,9 +18,9 @@ export default function Cart(props) {
             <div className="cart-list">
                 <h2 className="cartTitle">Your Cart:</h2>
                 <hr className="cartHr" />
-                {props.cart.map((mug) => (
+                {props.cart.map((mug, index) => (
                     <CartCard
-                        key={mug.id}
+                        key={index}
                         mug={mug}
                         cart={props.cart}
                         setCart={props.setCart}
