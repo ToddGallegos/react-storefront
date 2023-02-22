@@ -1,4 +1,27 @@
 .signInContainer{
     background-color:#92A8D1;
     min-height: calc(100vh - 50px);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+#signinSubmit {
+    padding: 3px;
+    background-color: #F7CAC9;
+    border-radius: 10px;
+    margin-left:3.1rem;
+    margin-top: .5rem
+}
+
+#signinForm {
+    margin-top:1rem
+}
+
+.formTitle {
+    margin-top:1rem
+}
+
+.signinInput {
+    margin-bottom:.5rem
 }

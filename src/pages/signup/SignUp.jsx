@@ -2,7 +2,6 @@ import React from "react";
 import "./signup.css";
 
 export default function SignUp() {
-    
     const signUp = async (event) => {
         event.preventDefault();
         const username = event.target.elements["username"].value;
@@ -31,31 +30,38 @@ export default function SignUp() {
             );
             const data = await response.json();
             console.log(data);
-            alert(data.message)
+            alert(data.message);
         }
     };
 
     return (
         <div className="signUpContainer">
-            <h1>Sign Up</h1>
-            <form onSubmit={signUp}>
-                <label htmlFor="username">Username: </label>
-                <input
+            <h1 className="formTitle">Sign Up</h1>
+            <form id="signupForm" onSubmit={signUp}>
+                <label htmlFor="username">Username: </label> <br />
+                <input className="signupInput"
                     autoFocus="True"
                     type="text"
                     name="username"
                     id="username"
                 />
+                <br />
                 <label htmlFor="email">Email: </label>
-                <input type="text" name="email" id="email" />
+                <br />
+                <input className="signupInput" type="text" name="email" id="email" />
+                <br />
                 <label htmlFor="password">Password: </label>
-                <input type="password" name="password" id="password" />
+                <br />
+                <input className="signupInput" type="password" name="password" id="password" />
+                <br />
                 <label htmlFor="passwordCheck">Confirm Password: </label>
-                <input
+                <br />
+                <input className="signupInput"
                     type="password"
                     name="passwordCheck"
                     id="passwordCheck"
-                />
+                />{" "}
+                <br />
                 <button id="signupSubmit" type="submit">
                     Submit
                 </button>

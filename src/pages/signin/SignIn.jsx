@@ -28,14 +28,14 @@ export default function SignIn(props) {
 
   return (
     <div className="signInContainer">
-      <h1>Sign In</h1>
-      <h3>{(props.user === []) ? props.user.username +" logged in": "test"}</h3>
-      <form onSubmit={signIn}>
-        <label htmlFor="username">Username: </label>
-        <input autoFocus="True" type="text" name="username" id="username" />
-        <label htmlFor="password">Password: </label>
-        <input type="password" name="password" id="password" />
-        <button id="signupSubmit" type="submit">Sign In</button>
+      <h1 className="formTitle">Sign In</h1>
+      <form id="signinForm" onSubmit={signIn}>
+        <label htmlFor="username">Username: </label> <br />
+        <input className="signinInput" autoFocus="True" type="text" name="username" id="username" />
+        <br />
+        <label htmlFor="password">Password: </label> <br />
+        <input className="signinInput" type="password" name="password" id="password" /> <br />
+        <button id="signinSubmit" type="submit">Sign In</button>
       </form>
     </div>
   )
